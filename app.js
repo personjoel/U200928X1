@@ -6,15 +6,15 @@ const router = express.Router();
 
 //app.use(express.static('html'));
 app.get('/', function(req, res) {
-    res.sendFile(path.join('html/index.html'));
+    res.sendFile(path.join(__dirname+'/index.html'));
 })
 
 app.get('/index', function(req, res) {
-    res.sendFile(path.join('html/index.html'));
+    res.sendFile(path.join(__dirname+'/index.html'));
 })
 
 app.get('/aboutus', function(req, res) {
-    res.sendFile(path.join('html/aboutus.html'));
+    res.sendFile(path.join(__dirname+'/aboutus.html'));
 })
 
 app.use('/', router);
