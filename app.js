@@ -17,6 +17,10 @@ app.get('/aboutus', function(req, res) {
     res.sendFile(path.join(__dirname+'/aboutus.html'));
 })
 
+app.get('*', function(req, res){
+    res.status(404).send('Error 404');
+})
+
 app.use('/', router);
 
 app.listen(process.env.PORT || 3000);
